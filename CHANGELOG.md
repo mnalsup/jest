@@ -13,6 +13,7 @@
 ### Chore & Maintenance
 
 - `[docs]` Correct expects.assertions documentation by adding async/await for asynchronous function.
+- `[docs]` Add clarification on location of mocks folder for index files.
 
 ## 27.0.6
 
