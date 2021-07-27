@@ -11,6 +11,8 @@ Manual mocks are defined by writing a module in a `__mocks__/` subdirectory imme
 
 > When we require that module in our tests (meaning we want to use the manual mock instead of the real implementation), explicitly calling `jest.mock('./moduleName')` is **required**.
 
+To mock a module which has a folder that names the module and an `index.js` file exporting the contents, you should place the `__mocks__` folder adjacent to the `index.js` file. For example, when mocking a module `utils/index.js` you would place the mock in `utils/__mocks__/index.js`.
+
 ## Mocking Node modules
 
 If the module you are mocking is a Node module (e.g.: `lodash`), the mock should be placed in the `__mocks__` directory adjacent to `node_modules` (unless you configured [`roots`](Configuration.md#roots-arraystring) to point to a folder other than the project root) and will be **automatically** mocked. There's no need to explicitly call `jest.mock('module_name')`.
